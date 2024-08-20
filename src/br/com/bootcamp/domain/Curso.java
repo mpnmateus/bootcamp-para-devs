@@ -1,8 +1,19 @@
 package br.com.bootcamp.domain;
 
 public class Curso extends Conteudo{
+
+    private int cargaHoraria;
+
     @Override
     public double calcularXp() {
-        return 0;
+        return XP_PADRAO * cargaHoraria;
+    }
+
+    public int getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
     }
 }
